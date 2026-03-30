@@ -24,12 +24,12 @@ class Assignment1:
         # Create Machine and Printer threads
         # Write code here
         for i in range(self.NUM_MACHINES):
-            t1 = self.machineThread(i, self)
-            self.mThreads.append(t1)
+            t = self.machineThread(i, self)
+            self.mThreads.append(t)
 
         for i in range(self.NUM_PRINTERS):
-                t2 = self.printerThread(i, self)
-                self.pThreads.append(t2)
+                t = self.printerThread(i, self)
+                self.pThreads.append(t)
         # Start all the threads
         # Write code here
         for t in self.mThreads:
@@ -45,8 +45,7 @@ class Assignment1:
         # Wait until all printer threads finish by joining them
         # Write code here
 
-        for t in self.pThreads:
-         t.join()
+        
         for t in self.pThreads:
          t.join()
     # Printer class
