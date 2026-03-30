@@ -34,8 +34,7 @@ class Assignment1:
         # Write code here
         for t in self.mThreads:
             t.start()
-        for t in self.pThreads:
-            t.start()
+       
 
         # Let the simulation run for some time
         time.sleep(self.SIMULATION_TIME)
